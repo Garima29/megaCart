@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mega Cart</title>
+        
+    </head>
+    <body>
+        <div style="margin-top:7%">
+            <center>
+                <h2>Mega Cart</h2>
+            </center>
+        </div>
+        <div class="row">
+            <label>
+                Enter Username
+            </label>
+            <input id="username" type="text" minlength="6" maxlength="10" required></input>
+            <span id="username-err"></span>
+        </div>
+        <div class="row">
+            <label>
+                Enter Email id
+            </label>
+            <input id="email" type="text"></input>
+            <span id="email-err"></span>
+        </div>
+        <div class="row">
+            <label>
+                Enter Mobile Number
+            </label>
+            <input id="mobile" type="text" maxlength="10"></input>
+            <span id="mobile-err"></span>
+        </div>
+        <div class="row">
+            <label>
+                Enter Password
+            </label>    
+            <input id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></input>
+            <span id="password-err"></span>
+        </div>
+        <div class="row">
+            <label>
+                Confirm Password
+            </label>    
+            <input id="confirm-password" type="password"></input>
+            <span id="confirm-password-err"></span>
+        </div>
+        <div class="row">
+            <button type="submit" id="sign-up">Sign Up</button>
+        </div>
+    </body>
+    <footer>
+        <script type="text/javascript" src="./js/custom.js"></script>
+    </footer>
+</html>
