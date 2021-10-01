@@ -22,8 +22,8 @@ document.getElementById("sign-up").onclick=function(){
         if(passwordString == "") throw "Password is empty";
         if(!(emailPattern.test(emailString))) throw "Email Id is invalid! It should contain@ and .";
         if(!(passwordString === confirmString)) throw "Password doest not match!";     
-        JSON.stringify(localStorage.setItem("username", usernameString));
-        JSON.stringify(localStorage.setItem("password", passwordString));
+        localStorage.setItem["username"]=JSON.stringify(usernameString);
+        localStorage.setItem["password"]=JSON.stringify(passwordString);
         location.href='main.html';
     }
     catch(err){

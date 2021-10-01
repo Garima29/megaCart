@@ -5,6 +5,37 @@
         
     </head>
     <body>
-        <h1>Welcome to Mega Cart</h1>
+        <h1 id="heading"></h1>
+        <h6>Please click on an item to add to the cart</h6>
+        <ul class="product-list">
+            <li>
+                <img src="./images/clothing.jpg" id="product-1" onclick="alert('1 clothing item added!')">
+                <span>Clothing</span>
+                <span>200</span>
+            </li>
+            <li>
+                <img src="./images/footwear.jpg" id="product-2" onclick="alert('1 footwear item added!')">
+                <span>Footwear</span>
+                <span>300</span>
+            </li>
+            <li>
+                <img src="./images/health.jpg" id="product-3" onclick="alert('1 health item added!')">
+                <span>Health</span>
+                <span>400</span>
+            </li>
+            <li>
+                <img src="./images/school.jpg" id="product-4" onclick="alert('1 school item added!')">
+                <span>School</span>
+                <span>500</span>
+            </li>
+        </ul>
+        <button type="submit" id="cart">Click here to view cart</button>
+        <script>
+            const username = localStorage.getItem("username");
+            document.getElementById("heading").innerHTML="Dear "+username.toLocaleUpperCase()+" Welcome to Mega Cart";
+         </script>
     </body>
+    <footer>
+        <script type="text/javascript" src="./js/main.js"></script>
+    </footer>
 </html>
