@@ -1,5 +1,5 @@
 const username=localStorage["username"];
-document.getElementById("cart-heading").innerHTML="Dear "+username+"! Here's the summary of your bill...";
+document.getElementById("cart-heading").innerHTML="Dear "+username.toLocaleUpperCase()+"! Here's the summary of your bill...";
 const storedItems=JSON.parse(localStorage["items"]);
 var sum=0;
 storedItems.forEach(function(element) {
@@ -10,3 +10,7 @@ storedItems.forEach(function(element) {
     sum=sum+parseFloat(element.price);
 });
 document.getElementById("bill-summary").innerHTML="Your bill is Rs."+sum;
+document.getElementById("logout").onclick=function(){
+    localStorage.clear();
+    location.href="login.html";
+}

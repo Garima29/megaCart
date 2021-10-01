@@ -2,6 +2,7 @@ document.getElementById("sign-up").onclick=function(){
     let emailPattern = new RegExp("(?=.@*)(?=.+.com)");
     let emailString = document.getElementById("email").value;
     let usernameString = document.getElementById("username").value;
+    
     //to make sure that given number has digits between 0-9 and max length of 10 digits 
     let phoneNumberPattern = new RegExp("(?= [0-9]{10})"); 
     
@@ -22,8 +23,8 @@ document.getElementById("sign-up").onclick=function(){
         if(passwordString == "") throw "Password is empty";
         if(!(emailPattern.test(emailString))) throw "Email Id is invalid! It should contain@ and .";
         if(!(passwordString === confirmString)) throw "Password doest not match!";     
-        localStorage.setItem["username"]=JSON.stringify(usernameString);
-        localStorage.setItem["password"]=JSON.stringify(passwordString);
+        localStorage["username"]=JSON.stringify(usernameString);
+        localStorage["password"]=JSON.stringify(passwordString);
         location.href='main.html';
     }
     catch(err){

@@ -31,7 +31,7 @@
         </ul>
         <button type="submit" id="cart">Click here to view cart</button>
         <script>
-            const username = localStorage.getItem("username");
+            const username = JSON.parse(localStorage.getItem("username"));
             document.getElementById("heading").innerHTML="Dear "+username.toLocaleUpperCase()+" Welcome to Mega Cart";
          </script>
     </body>
